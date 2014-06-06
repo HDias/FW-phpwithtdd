@@ -1,0 +1,24 @@
+{
+    "name": "had/phpdjc",
+    "description": "testes",
+    "require-dev": {
+        "phpunit/phpunit": "*",
+        "phpunit/phpunit-selenium": ">=1.2"
+    },
+    "authors": [
+        {
+            "name": "horecio",
+            "email": "horecio@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+	"autoload":{
+		"psr-0":{
+			"HAD":"src/",
+			"SON":"framework/"
+			}
+	},
+	"config":{
+		"bin-dir":"bin/"
+	}
+}

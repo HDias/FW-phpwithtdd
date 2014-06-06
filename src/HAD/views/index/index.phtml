@@ -1,0 +1,37 @@
+<div class="row">
+		<a id="adicionar"
+			class="btn btn-xls btn-primary" 
+			href="/artigo/add" >
+			Adicionar
+		</a>
+</div>
+<div class="row">
+	<table class="table table-striped table-bordered table-hover">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nome</th>
+				<th>Descrição</th>
+				<th>Ação</th>
+			</tr>
+		</thead>
+		<tbody>
+  		<?php foreach ($this->view->objetos as $artigo):?>
+  			<tr>
+				<td><?php echo $artigo['id'] ?></td>
+				<td><?php echo $artigo['nome'] ?></td>
+				<td><?php echo $artigo['descricao'] ?></td>
+				<td>
+					<a class="btn btn-xls btn-default" href="/artigo/edit/?id=<?=$artigo['id'];?>" >
+						<span class="glyphicon glyphicon-pencil"></span> Editar
+					</a>
+					<a class="btn btn-xls btn-danger" href="/artigo/delete/?id=<?=$artigo['id'];?>" >
+						<span class="glyphicon glyphicon-trash"></span> Deletar
+					</a>
+				
+				</td>
+			</tr>
+		<?php endforeach?>
+		</tbody>
+	</table>
+</div>
